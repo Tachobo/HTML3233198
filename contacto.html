@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,52 +8,72 @@
 <body>
     <main>
         <section>
-            <h1>
-                <form>
-                    <table>
+                <h1>REGISTRO DE FORMULARIO</h1>
+            
+                 <form>
+                    <fieldset>
+                        <legend>Información Personal</legend>
+                     <table>
+                     <tr>
+                     <td><label for="Nombre">Nombre</label></td>
+                     <td><input type="text" id="Nombre" pattern="[a-zA-ZáéíóúÁÉÍÓÚñÑ\s]+" required></td>
+                     </tr>                                    
+                     <tr>
+                     <td><label for="Apellido">Apellido</label></td>
+                     <td><input type="text" id="Apellido" pattern="[a-zA-ZáéíóúÁÉÍÓÚñÑ\s]+" required></td>
+                     </tr>                                
+                     <tr>
+                     <td><label for="Edad">Edad</label></td>
+                     <td><input type="number" id="Edad" step="0.5" min="15" max="34"required></td>
+                     </tr>                                          
+                     <tr>
+                     <td><label for="Ciudad">Ciudad</label></td>
+                     <td>
+                     <select name="Ciudad" id="Ciudad">
+                     <option value="1">Barranquilla</option>
+                     <option value="2">Cúcuta</option>
+                     <option value="3">Tolima</option>        
+                     </select>  
+                     </td>
+                     </tr>                 
+                      <tr>
+                     <td><label for="Nacimiento">Nacimiento</label></td>  
+                     <td><input type="date"required></td>  
+                     </tr>    
+                     </table> 
+                     </fieldset>
+                     <button>Guardar</button>
+                    </form>
+        </section>
+        <section>
+            <h2>Datos Registrados</h2>
+            <table border="1">
+                <thead>
                     <tr>
-                    <td><label for="Nombre">Nombre</label></td>
-                    <td><input type="text" id="Nombre"required></td>
+                        <th>Nombre</th>
+                        <th>Apellido</th>
+                        <th>Edad</th>
+                        <th>Ciudad</th>
+                        <th>Nacimiento</th>
                     </tr>
-                    </table>
-                <br>
-                <table>
-                <tr>
-                <td><label for="Apellido">Apellido</label></td>
-                <td><input type="text" id="Apellido"required></td>
-                </tr>
-                </table>
-                <br>
-                <table>
-                <tr>
-                <td><label for="Edad">Edad</label></td>
-                <td><input type="number" step="0.5" max="19"></td>
-                </tr>
-                </table>    
-                <br>
-                <table>
-                <tr>
-                <td><label for="Ciudad">Ciudad</label></td>
-                <td>
-                <select name="Ciudad" id="Ciudad">
-                <option value="1">Barranquilla</option>
-                <option value="2">Cúcuta</option>
-                <option value="3">Tolima</option>        
-                </select>  
-                </td>
-                </tr>
-                </table>
-                <br>
-                <table>
-                <tr>
-                <td><label for="Nacimiento">Nacimiento</label></td>  
-                <td><input type="date"> </td>  
-                </tr>    
-                </table> 
-                </div>
-                <button>Guardar</button>
-            </form>
-            </h1>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Juan</td>
+                        <td>Pérez</td>
+                        <td>25</td>
+                        <td>Barranquilla</td>
+                        <td>1998-05-15</td>
+                    </tr>
+                    <tr>
+                        <td>Ana</td>
+                        <td>Gómez</td>
+                        <td>30</td>
+                        <td>Cúcuta</td>
+                        <td>1995-11-20</td>
+                    </tr>
+                </tbody>
+            </table>
         </section>
     </main>
 </body>
